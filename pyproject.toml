@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "articulatio-mlx"
+version = "0.1.0"
+description = "Fast Apple Silicon (MLX) inference for Articulatio-DE and Breeze TTS 2"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Christoph Lindl-Guk (eigenhand)" }]
+requires-python = ">=3.10"
+dependencies = [
+  # engine.py uses internals of mlx-audio's Breeze model (prompt layout, codec);
+  # a new mlx-audio version needs tests/test_parity.py to pass before the pin moves.
+  "mlx-audio==0.5.6",
+  "numpy",
+  "soundfile",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+articulatio-mlx = "articulatio_mlx.cli:main"
+
+[tool.setuptools]
+packages = ["articulatio_mlx"]

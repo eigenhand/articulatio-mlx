@@ -1,0 +1,17 @@
+__pycache__/
+*.egg-info/
+.venv/
+build/
+dist/
+.pytest_cache/
+*.wav
+*.gguf
+*.safetensors
+
+# models and generated audio
+models/
+out/
+*.npz
+*.pcm
+# macOS
+.DS_Store

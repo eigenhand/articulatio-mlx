@@ -1,0 +1,14 @@
+articulatio-mlx
+Copyright 2026 Christoph Lindl-Guk (eigenhand)
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This package builds on mlx-audio (https://github.com/Blaizzy/mlx-audio),
+Copyright (c) 2024 Prince Canuma, licensed under the MIT License. mlx-audio is
+a dependency and is not bundled; articulatio_mlx/codec_fix.py replaces one
+method of it at runtime.
+
+Model weights are not part of this repository. Breeze TTS 2 and models derived
+from it, including Articulatio-DE, are licensed under the BreezeBlue Research
+and Non-Commercial License Agreement
+(https://huggingface.co/BreezeBlue/Breeze-TTS-2/blob/main/LICENSE), and so is
+the audio they generate.
